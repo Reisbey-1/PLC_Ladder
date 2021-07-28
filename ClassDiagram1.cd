@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LadderDll::CSubNet">
+    <Position X="0.5" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>IS8IAAAgAagJ4CAIxaQQhBEKyA4k4UIBAI5kJQFZiJM=</HashCode>
+      <FileName>SubNet.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_listLadderElement" />
+      <Field Name="m_listConnectionElement" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LadderDll::CLadderElement">
+    <Position X="8.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>yIgNDQKJAAJoEgAoAACGzEJAaMBQCAFgCNZCQIQFpEE=</HashCode>
+      <FileName>LadderElement.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CList&lt;TYPE, ARG_TYPE&gt;">
+    <Position X="5.25" Y="1" Width="2" />
+    <NestedTypes>
+      <Struct Name="CList&lt;TYPE, ARG_TYPE&gt;::CNode" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>c:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afxtempl.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>IARIABoIAAAAAACACCRQgAAABCIoQAIgKAgAFIAgAEQ=</HashCode>
+      <FileName>c:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afxtempl.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

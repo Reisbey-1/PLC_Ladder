@@ -1,0 +1,449 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F9226715-75D4-4905-A95C-AED54DB7D8CB}</ProjectGuid>
+    <RootNamespace>Ladder</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <UseOfAtl>Static</UseOfAtl>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25420.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName)d</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <CustomBuildStep>
+      <Message>Die Registrierung wird durchgeführt</Message>
+      <Command>regsvr32 /u   c:\sw\bin\ladderd.dll
+regsvr32    c:\sw\bin\ladder.dll
+echo regsvr32 exec. time &gt; "$(OutDir)regsvr32.trg"
+</Command>
+      <Outputs>$(OutDir)regsvr32.trg;%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>..\..\bin/Ladder.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>..\AlcUtility;..\..\MdCommon\implement;..\plc\alclib;..\..\DVr\implement;..\..\DVr\implement\src;..\plc\alco;..\..\dvr\implement\diagrameditor;..\..\EagCommon_6\implement;..\..\Messanger\implement;..\..\XmlDll\implement;..\..\BitmapLib\implement;..\..\LexAnlysr\implement;..\..\dtl\implement;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WINDLL;_AFXDLL;LADDER_EXPORTS;WIN32;_WINDOWS;NDEBUG;_USRDLL;_UNICODE;UNICODE</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Release/Ladder.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <RemoveUnreferencedCodeData>false</RemoveUnreferencedCodeData>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0407</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>AlcUtility.lib;MdCommon.lib;alco.lib;dvr.lib;eagcommon.lib;lexAnlysr.lib;BitmapLib.lib;xmldll.lib;Messanger.lib</AdditionalDependencies>
+      <OutputFile>..\..\bin\Ladder.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <ImportLibrary>..\..\lib\Ladder.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <RegisterOutput>true</RegisterOutput>
+      <PerUserRedirection>true</PerUserRedirection>
+      <UACExecutionLevel>AsInvoker</UACExecutionLevel>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release/Ladder.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <CustomBuildStep>
+      <Message>Die Registrierung wird durchgeführt</Message>
+      <Command>regsvr32 /u   c:\sw\bin\ladder.dll
+regsvr32    c:\sw\bin\ladderd.dll
+</Command>
+      <Outputs>$(OutDir)regsvr32.trg;%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>../../bin/Ladderd.tlb</TypeLibraryName>
+      <HeaderFileName>%(Filename)_h.h</HeaderFileName>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\AlcUtility;..\..\MdCommon\implement;..\plc\alclib;..\..\DVr\implement;..\..\DVr\implement\src;..\plc\alco;..\..\dvr\implement\diagrameditor;..\..\EagCommon_6\implement;..\..\Messanger\implement;..\..\XmlDll\implement;..\..\BitmapLib\implement;..\..\LexAnlysr\implement;..\..\dtl\implement;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>LADDER_EXPORTS;_AFXDLL;_WINDLL;_USRDLL;_UNICODE;UNICODE</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Debug/Ladder.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0407</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <PerUserRedirection>false</PerUserRedirection>
+      <AdditionalDependencies>AlcUtilityd.lib;MdCommond.lib;Alcod.lib;dvrd.lib;eagcommond.lib;lexAnlysrd.lib;Messangerd.lib;xmldlld.lib;BitmapLibd.lib</AdditionalDependencies>
+      <OutputFile>..\..\bin\Ladderd.dll</OutputFile>
+      <AdditionalLibraryDirectories>..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Debug/$(TargetName)d.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <LinkTimeCodeGeneration />
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <ImportLibrary>..\..\lib\Ladderd.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <RegisterOutput>false</RegisterOutput>
+      <OptimizeReferences>
+      </OptimizeReferences>
+      <UACExecutionLevel>AsInvoker</UACExecutionLevel>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug/Ladder.bsc</OutputFile>
+    </Bscmake>
+    <Manifest>
+      <OutputManifestFile />
+    </Manifest>
+    <ManifestResourceCompile>
+      <ResourceOutputFileName />
+    </ManifestResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AnaliticalUtilities.cpp" />
+    <ClCompile Include="ConnectionElement.cpp" />
+    <ClCompile Include="DlgAnalogInputs.cpp" />
+    <ClCompile Include="DlgAnalogOutputs.cpp" />
+    <ClCompile Include="DlgBits.cpp" />
+    <ClCompile Include="DlgBytes.cpp" />
+    <ClCompile Include="DlgConnectionInfo.cpp" />
+    <ClCompile Include="DlgCounters.cpp" />
+    <ClCompile Include="DlgDigitalInputs.cpp" />
+    <ClCompile Include="DlgDigitalOutputs.cpp" />
+    <ClCompile Include="DlgEBytes.cpp" />
+    <ClCompile Include="DlgEByteSlect.cpp" />
+    <ClCompile Include="DlgElementInfo.cpp" />
+    <ClCompile Include="DlgEWords.cpp" />
+    <ClCompile Include="DlgMemories.cpp" />
+    <ClCompile Include="DlgRegisters.cpp" />
+    <ClCompile Include="DlgSubNtSel.cpp" />
+    <ClCompile Include="DlgTimers.cpp" />
+    <ClCompile Include="DlgWords.cpp" />
+    <ClCompile Include="gxDrawer.cpp" />
+    <ClCompile Include="Ladder.cpp" />
+    <ClCompile Include="LadderElement.cpp" />
+    <ClCompile Include="ldr.cpp" />
+    <ClCompile Include="LE_And.cpp" />
+    <ClCompile Include="LE_And2.cpp" />
+    <ClCompile Include="LE_Block.cpp" />
+    <ClCompile Include="LE_Contactor.cpp" />
+    <ClCompile Include="LE_Counter.cpp" />
+    <ClCompile Include="LE_DiagramEntity.cpp" />
+    <ClCompile Include="LE_End.cpp" />
+    <ClCompile Include="LE_In.cpp" />
+    <ClCompile Include="LE_InvContactor.cpp" />
+    <ClCompile Include="LE_Invert.cpp" />
+    <ClCompile Include="LE_Memory.cpp" />
+    <ClCompile Include="LE_Off.cpp" />
+    <ClCompile Include="LE_On.cpp" />
+    <ClCompile Include="LE_Or.cpp" />
+    <ClCompile Include="LE_Or2.cpp" />
+    <ClCompile Include="LE_Out.cpp" />
+    <ClCompile Include="LE_Output.cpp" />
+    <ClCompile Include="LE_Point.cpp" />
+    <ClCompile Include="LE_Register.cpp" />
+    <ClCompile Include="LE_Start.cpp" />
+    <ClCompile Include="LE_Text.cpp" />
+    <ClCompile Include="LE_Timer.cpp" />
+    <ClCompile Include="NetWork.cpp" />
+    <ClCompile Include="NetWorkContainer.cpp" />
+    <ClCompile Include="SI.cpp" />
+    <ClCompile Include="Signal2.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="SubNet.cpp" />
+    <ClCompile Include="SubNetBlock.cpp" />
+    <ClCompile Include="SubNetContactor.cpp" />
+    <ClCompile Include="SubNetFunction.cpp" />
+    <ClCompile Include="SubNetList.cpp" />
+    <ClCompile Include="SubNetSchalt.cpp" />
+    <ClCompile Include="TLE_Contactor.cpp" />
+    <ClCompile Include="ToolsStates.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="Ladder.rgs" />
+    <None Include="ldr.rgs" />
+    <None Include="res\Ladder.rc2" />
+    <None Include="SubNets.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="Ladder.idl">
+      <TargetEnvironment Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Win32</TargetEnvironment>
+      <GenerateStublessProxies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateStublessProxies>
+      <TypeLibraryName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\bin\ladderd.tlb</TypeLibraryName>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Ladder_i.h</HeaderFileName>
+      <InterfaceIdentifierFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Ladder_i.c</InterfaceIdentifierFileName>
+      <TargetEnvironment Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Win32</TargetEnvironment>
+      <GenerateStublessProxies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateStublessProxies>
+      <TypeLibraryName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\bin\ladder.tlb</TypeLibraryName>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Ladder_i.h</HeaderFileName>
+      <InterfaceIdentifierFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Ladder_i.c</InterfaceIdentifierFileName>
+      <MkTypLibCompatible Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</MkTypLibCompatible>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</MkTypLibCompatible>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Ladder.rc">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OUTDIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OUTDIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AnaliticalUtilities.h" />
+    <ClInclude Include="ConnectionElement.h" />
+    <ClInclude Include="DlgAnalogInputs.h" />
+    <ClInclude Include="DlgAnalogOutputs.h" />
+    <ClInclude Include="DlgBits.h" />
+    <ClInclude Include="DlgBytes.h" />
+    <ClInclude Include="DlgConnectionInfo.h" />
+    <ClInclude Include="DlgCounters.h" />
+    <ClInclude Include="DlgDigitalInputs.h" />
+    <ClInclude Include="DlgDigitalOutputs.h" />
+    <ClInclude Include="DlgEBytes.h" />
+    <ClInclude Include="DlgEByteSlect.h" />
+    <ClInclude Include="DlgElementInfo.h" />
+    <ClInclude Include="DlgEWords.h" />
+    <ClInclude Include="DlgMemories.h" />
+    <ClInclude Include="DlgRegisters.h" />
+    <ClInclude Include="DlgSubNtSel.h" />
+    <ClInclude Include="DlgTimers.h" />
+    <ClInclude Include="DlgWords.h" />
+    <ClInclude Include="gxDrawer.h" />
+    <ClInclude Include="Ladder.h" />
+    <ClInclude Include="LadderElement.h" />
+    <ClInclude Include="ldr.h" />
+    <ClInclude Include="LE_And.h" />
+    <ClInclude Include="LE_And2.h" />
+    <ClInclude Include="LE_Block.h" />
+    <ClInclude Include="LE_Contactor.h" />
+    <ClInclude Include="LE_Counter.h" />
+    <ClInclude Include="LE_DiagramEntity.h" />
+    <ClInclude Include="LE_End.h" />
+    <ClInclude Include="LE_In.h" />
+    <ClInclude Include="LE_InvContactor.h" />
+    <ClInclude Include="LE_Invert.h" />
+    <ClInclude Include="LE_Memory.h" />
+    <ClInclude Include="LE_Off.h" />
+    <ClInclude Include="LE_On.h" />
+    <ClInclude Include="LE_Or.h" />
+    <ClInclude Include="LE_Or2.h" />
+    <ClInclude Include="LE_Out.h" />
+    <ClInclude Include="LE_Output.h" />
+    <ClInclude Include="LE_Point.h" />
+    <ClInclude Include="LE_Register.h" />
+    <ClInclude Include="LE_Start.h" />
+    <ClInclude Include="LE_Text.h" />
+    <ClInclude Include="LE_Timer.h" />
+    <ClInclude Include="NetWork.h" />
+    <ClInclude Include="NetWorkContainer.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="SI.h" />
+    <ClInclude Include="Signal2.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="SubNet.h" />
+    <ClInclude Include="SubNetBlock.h" />
+    <ClInclude Include="SubNetContactor.h" />
+    <ClInclude Include="SubNetFunction.h" />
+    <ClInclude Include="SubNetList.h" />
+    <ClInclude Include="SubNetSchalt.h" />
+    <ClInclude Include="TLE_Contactor.h" />
+    <ClInclude Include="ToolsStates.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="bitmap1.bmp" />
+    <Image Include="bitmap_b.bmp" />
+    <Image Include="bitmap_c.bmp" />
+    <Image Include="bitmap_i.bmp" />
+    <Image Include="bitmap_m.bmp" />
+    <Image Include="bitmap_o.bmp" />
+    <Image Include="bitmap_t.bmp" />
+    <Image Include="bit_time.bmp" />
+    <Image Include="bmp00001.bmp" />
+    <Image Include="bmp00002.bmp" />
+    <Image Include="bmp00003.bmp" />
+    <Image Include="bmp00004.bmp" />
+    <Image Include="bmp00005.bmp" />
+    <Image Include="bmp00006.bmp" />
+    <Image Include="bmp00007.bmp" />
+    <Image Include="bmp00008.bmp" />
+    <Image Include="bmp00009.bmp" />
+    <Image Include="bmp00010.bmp" />
+    <Image Include="bmp00011.bmp" />
+    <Image Include="bmp00012.bmp" />
+    <Image Include="bmp00013.bmp" />
+    <Image Include="bmp00014.bmp" />
+    <Image Include="bmp00015.bmp" />
+    <Image Include="bmp00016.bmp" />
+    <Image Include="bmp00017.bmp" />
+    <Image Include="bmp00018.bmp" />
+    <Image Include="bmp00019.bmp" />
+    <Image Include="bmp00020.bmp" />
+    <Image Include="bmp00021.bmp" />
+    <Image Include="bmp00022.bmp" />
+    <Image Include="bmp00023.bmp" />
+    <Image Include="bmp00024.bmp" />
+    <Image Include="bmp00025.bmp" />
+    <Image Include="bmp00026.bmp" />
+    <Image Include="bmp00027.bmp" />
+    <Image Include="bmp00028.bmp" />
+    <Image Include="bmp00029.bmp" />
+    <Image Include="bmp00030.bmp" />
+    <Image Include="bmp00031.bmp" />
+    <Image Include="bmp00032.bmp" />
+    <Image Include="bmp00033.bmp" />
+    <Image Include="bmp00034.bmp" />
+    <Image Include="bmp00035.bmp" />
+    <Image Include="bmp00036.bmp" />
+    <Image Include="bmp00037.bmp" />
+    <Image Include="bmp00038.bmp" />
+    <Image Include="bmp00039.bmp" />
+    <Image Include="bmp00040.bmp" />
+    <Image Include="bmp00041.bmp" />
+    <Image Include="bmp00042.bmp" />
+    <Image Include="bmp00043.bmp" />
+    <Image Include="bmp00044.bmp" />
+    <Image Include="bmp00045.bmp" />
+    <Image Include="bmp00046.bmp" />
+    <Image Include="bmp00047.bmp" />
+    <Image Include="bmp00048.bmp" />
+    <Image Include="bmp00049.bmp" />
+    <Image Include="bmp00050.bmp" />
+    <Image Include="bmp00051.bmp" />
+    <Image Include="bmp00052.bmp" />
+    <Image Include="bmp00053.bmp" />
+    <Image Include="bmp00054.bmp" />
+    <Image Include="bmp00055.bmp" />
+    <Image Include="bmp00056.bmp" />
+    <Image Include="bmp00057.bmp" />
+    <Image Include="bmp00058.bmp" />
+    <Image Include="bmp00059.bmp" />
+    <Image Include="bmp00060.bmp" />
+    <Image Include="bmp00061.bmp" />
+    <Image Include="bmp00062.bmp" />
+    <Image Include="bmp00063.bmp" />
+    <Image Include="bmp00064.bmp" />
+    <Image Include="bmp00065.bmp" />
+    <Image Include="bmp00066.bmp" />
+    <Image Include="bmp00067.bmp" />
+    <Image Include="bmp00068.bmp" />
+    <Image Include="bmp00069.bmp" />
+    <Image Include="bmp00070.bmp" />
+    <Image Include="bmp00071.bmp" />
+    <Image Include="bmp00072.bmp" />
+    <Image Include="bmp00073.bmp" />
+    <Image Include="bmp00074.bmp" />
+    <Image Include="bmp00075.bmp" />
+    <Image Include="bmp00134.bmp" />
+    <Image Include="bmp00135.bmp" />
+    <Image Include="memory.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="Ladder.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

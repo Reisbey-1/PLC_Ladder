@@ -1,0 +1,254 @@
+
+	// Ladder.idl : IDL-Quellcode für Ladder.exe
+//
+// Diese Datei wird von dem Programm MIDL verarbeitet, um
+// die Typbibliothek (Ladder.tlb) und Marshalling-Code zu erstellen.
+import "ocidl.idl";
+import "oaidl.idl";
+//import "oaidl.idl";
+//import "ocidl.idl";
+
+
+	[
+		object,
+		uuid(2B946F2C-FB4A-415F-B395-FF173735FACA),
+		dual,
+		helpstring("Ildr-Schnittstelle"),
+		pointer_default(unique)
+	]
+	interface Ildr : IDispatch
+	{
+	};
+
+[
+	uuid(8C121126-3183-4EE6-AABD-C01908232A7F),
+	version(1.0),
+	helpstring("Ladder 1.0 Typbibliothek")
+]
+library LadderLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+
+
+	typedef [uuid(3A47444F-91FF-4602-A403-4F9311669A18)] enum tagDS
+	{
+		LINE = 1,
+		HORVER,
+		VERHOR
+	} DS; // DrawingStill;
+
+	typedef [uuid(0B064B6B-C58B-44f5-9837-4A77A30C8243)] enum tagDC
+	{
+		// do not change sequency for existing documents !
+		CONTEX_NONE = 0, 
+		CONTEX_TIMER,
+		CONTEX_COUNTER,
+		CONTEX_MEMORY,
+		CONTEX_AND,
+		CONTEX_AND2,
+		CONTEX_OR2
+	} DC; // Drawing Contex
+
+
+
+	typedef [uuid(494B2223-146E-4898-AB05-434790FC9123)]enum tagDM	
+	{
+		DRAW = 0,
+		REFRESH,
+		HIGHLIGTH
+	} DM; // drawing mode 
+
+	typedef [uuid(FC5502CC-BC18-4cae-B591-BBDD3A1C0D90)]enum tagSNT	
+	{
+		NET_0 = 0,
+		NET_1 = 1,
+		NET_2 = 2,
+		NET_3 = 3,
+		NET_4 = 4,
+		NET_5 = 5,
+		NET_6 = 6,
+		NET_7 = 7,
+		NET_8 = 8,
+		NET_9 = 9,
+		NET_10 = 10,
+		NET_11 = 11,
+		NET_12 = 12,
+		NET_13 = 13,
+		NET_14 = 14,
+		NET_15 = 15,
+		SUB_NET_CONTACTOR = NET_15,
+
+		NET_30 = 30,
+		SUB_NET_BLOCK = NET_30,
+		NET_45= 45,
+		SUB_NET_BLOCK_ = NET_45,
+
+		NET_60 = 15,
+		SUB_NET_FUNCTION = NET_60,
+		NET_85 = 85,
+		SUB_NET_FUNCTION_ = NET_85,
+
+		NET_90 = 90,
+		SUB_NET_LIST = NET_90,
+		NET_105 = 105,
+		SUB_NET_LIST_ = NET_105,
+
+
+		NET_120 = 120,
+		NET_BLOCK_SHALT = NET_120
+		 
+		
+//		CONTACTOR_NET = 0 ,
+//		TIMER_NET,
+//		COUNTER_NET
+	} SNT; // sub net type
+
+	typedef [uuid(EC037F5B-EA90-4e34-AB1B-366D258B9C20)]enum tagERT	
+	{	// Do Not change  sequence for existing document files !
+		
+		OUTPUT = 0 ,
+		BIT,
+		MEMORY,
+		TIMER,
+		COUNTER,
+		INPUt, 
+		BLOCK,
+		FUNCTION,
+		LIST,
+		ANALOGINPUT, 
+		ANALOGOUTPUT,
+		nill,
+		SUBROUTINE,			// 	
+		ALL,				// all types 
+		COUNT_ERT,			// count of element register type	
+		START
+	}ERT;//  element reference type
+
+	typedef [uuid(99BEEFAF-CF5F-40c7-B9A2-92A6DDB5A32E)]enum tagET	
+	{		// Do Not change  sequence for existing document files !
+		TYPE_LINE  = 0,
+		TYPE_POINT,
+		TYPE_ELEMENT,
+		TYPE_CONTACTOR,
+		TYPE_OUTPUT,
+		TYPE_START,
+		TYPE_END,
+		TYPE_INVCONTACTOR,
+		TYPE_TIMER,
+		TYPE_COUNTER,
+		TYPE_BLOCK,
+		TYPE_FUNCTION, 
+		TYPE_LIST,
+		TYPE_MEMORY,
+		TYPE_ON,
+		TYPE_OFF,
+		TYPE_INVERT,
+		TYPE_AND,
+		TYPE_OR,
+		TYPE_IN,
+		TYPE_OUT,
+		TYPE_POINT2,
+		TYPE_BUFFER,
+		TYPE_TEXT,
+		TYPE_SUBROUTINE,
+		TYPE_REGISTER,
+		TYPE_LIST2,
+		TYPE_AND2,
+		TYPE_OR2
+
+	} ET;// element type 
+	
+	
+	/// CConnectionElement
+	typedef [uuid(83003D89-1499-497d-A104-9F2E11CEB8FA)]enum tagCT
+	{
+		CNTtoCNT = 0,	// Center to center
+		CNTtoPRE,
+		CNTtoPAS,
+		PREtoCNT,
+		PREtoPRE,
+		PREtoPAS,
+		PAStoCNT,
+		PAStoPRE,
+		PAStoPAS,
+		UNKNOWN
+	} CT; // ConnectionType;
+	
+	typedef [uuid(D768AAF0-3D74-4eb2-999E-16EC4A0AD045)]enum tagMT
+	{		
+		CNT = 1,
+		PRE,
+		PAS,
+		SET,
+		RST,
+		QPT,
+		P01,   // point 1 for Logic elements ( and, or ..)  
+		P02,
+		P03,
+		P04,
+		P05, 
+		P06,
+		PBASE,  // base connection type for the extended type logic elements(and2, or2)
+				// PBASE +0     :  connection with punkt 0
+				// PBASE +1     :  connection with punkt 1
+				// PBASE +2     :  connection with punkt 2
+				// PBASE +3     :  connection with punkt 3
+				// ....
+				// ....
+				 	
+		OHP = 30,     // other hot point
+		MAX_AND_SIZE = 17
+
+	}MT ; // miscallenous type
+
+
+
+	typedef [uuid(6F9DC39F-65E8-4186-B3AE-9A44BBD5FF45)]enum tagTIMERMODES
+	{		
+		TIMER_MODE_0 = 0,
+		TIMER_MODE_1,
+		TIMER_MODE_2,
+		TIMER_MODE_3,
+		TIMER_MODE_4,
+		TIMER_MODE_5,
+		TIMER_MODE_6,
+		TIMER_MODE_7
+
+	}TIMERMODES ; // miscallenous type
+
+	typedef [uuid(1F28A899-1B57-41d4-AB6A-3ABBA2D8A8B6)]enum tagMEMORYMODES
+	{		
+		MEMORY_MODE_0 = 0,
+		MEMORY_MODE_1,
+		MEMORY_MODE_2,
+		MEMORY_MODE_3,
+		MEMORY_MODE_4,
+		MEMORY_MODE_5
+
+	}MEMORYMODES ; // miscallenous type
+
+
+
+	typedef [uuid(7C172763-4CFD-4bd9-9C97-A1EBA3D2F17D)]enum tagCOUNTERMODES
+	{		
+		COUNTER_MODE_UP = 0,
+		COUNTER_MODE_DOWN,
+
+	}COUNTERMODES ; // miscallenous type
+
+
+
+	[
+		uuid(35FEF323-EADA-4003-82A3-E803EE985DEE),
+		helpstring("ldr Class")
+	]
+	coclass ldr
+	{
+		[default] interface Ildr;
+	};
+
+};
+
+	

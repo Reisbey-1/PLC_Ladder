@@ -1,0 +1,1 @@
+C:\toshiba\sw\bin\alc -s C:\temp\B1.kmd -b

@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LadderDll::CSubNet" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IScIAAAgAagJ4CAIxaQQhBEKyA4k4UIBAI5kJQFZiJM=</HashCode>
+      <FileName>SubNet.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LadderDll::CSubNetContactor">
+    <Position X="4" Y="1.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAABCAAAAAAAAAACAAAYAAAEAAAAAAAAAA=</HashCode>
+      <FileName>SubNetContactor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LadderDll::CSubNetFunction" Collapsed="true">
+    <Position X="1.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAAgIAAAAAAAAAACAAA=</HashCode>
+      <FileName>SubNetFunction.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LadderDll::CSubNetList" Collapsed="true">
+    <Position X="4.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAIAAAAAAgIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SubNetList.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LadderDll::CSubNetSchalt" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAYIgAAACAAACAABACAAAAACAAgYAIAEBAAQBEEAMQ=</HashCode>
+      <FileName>SubNetSchalt.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LadderDll::CSubNetBlock" Collapsed="true">
+    <Position X="4.5" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAIgIAAQAAAAAAAAAAA=</HashCode>
+      <FileName>SubNetBlock.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LadderDll::CNetWorkContainer">
+    <Position X="7" Y="2.25" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="LadderDll::CNetWorkContainer::__unnamed_enum_035a_1">
+        <TypeIdentifier>
+          <NewMemberFileName>NetWorkContainer.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAARAAAAAQCAAAgAAAABAAAA=</HashCode>
+      <FileName>NetWorkContainer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LadderDll::CNetWork">
+    <Position X="9.75" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>BABAEAAkAgAAAAAAAEEABQQAECAEgEABAAAgIABAABA=</HashCode>
+      <FileName>NetWork.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dtl::TTrain&lt;T&gt;" Collapsed="true">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAgAAAAIAAAAAABAAAAAIAAAAAAAEgAAAAAAA=</HashCode>
+      <FileName>c:\sw\dtl\implement\TTrain.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LadderDll::CLE_Start">
+    <Position X="14.75" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>gQAAASAAABJAAgAAICAAAAIAAiCgBwAgMHAAAIAEAAA=</HashCode>
+      <FileName>LE_Start.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_listPointsIDs" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LadderDll::CLadderElement" Collapsed="true">
+    <Position X="15" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>yIANDQKJAAJoEgAoAACGzEJAKMBwCAFgCNZCQIQFpAE=</HashCode>
+      <FileName>LadderElement.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CList&lt;TYPE, ARG_TYPE&gt;" Collapsed="true">
+    <Position X="18.75" Y="2" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="CList&lt;TYPE, ARG_TYPE&gt;::CNode" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>c:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afxtempl.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>IARIABoIAAAAAACACCRQgAAABCIoQAIgKAgAFIAgAEQ=</HashCode>
+      <FileName>c:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afxtempl.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

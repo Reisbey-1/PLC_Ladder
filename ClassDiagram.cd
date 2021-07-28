@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LadderDll::CSignal">
+    <Position X="4.5" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>QAIAgAAIBAAAYAAAAAAAAAgA0BAAAAAAIAAgAAQAAAA=</HashCode>
+      <FileName>Signal.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_listSI" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LadderDll::CDependentSignals" Collapsed="true">
+    <Position X="1" Y="3.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IAEEQAAAAAAAAAABAACAoQAAAAAEAAAAAAAABAAAAAM=</HashCode>
+      <FileName>DependentSignals.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LadderDll::CGroup" Collapsed="true">
+    <Position X="7.25" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAJAAAAAAAAAIACAAAAAAQQAAAIAAAACACQgABAAAAA=</HashCode>
+      <FileName>Group.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMap&lt;KEY, ARG_KEY, VALUE, ARG_VALUE&gt;" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>MQRAAIEABAFAACTBCAQEoQAAACEEAQAgIAAAAAAAEAQ=</HashCode>
+      <FileName>c:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afxtempl.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CObject" Collapsed="true">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAQAQAAAAACAAAgQAAADAAAAAAEUAgAEAAAAA=</HashCode>
+      <FileName>c:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CArray&lt;TYPE, ARG_TYPE&gt;" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IAZAAABAGAAAABCgCACYgAAAAiMAARAEKAAIAAAAAAA=</HashCode>
+      <FileName>c:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afxtempl.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CList&lt;TYPE, ARG_TYPE&gt;" Collapsed="true">
+    <Position X="4.5" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IARIABoIAAAAAACACCRQgAAABCIoQAIgKAgAFIAgAEQ=</HashCode>
+      <FileName>c:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afxtempl.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

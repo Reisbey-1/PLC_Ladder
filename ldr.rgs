@@ -1,0 +1,22 @@
+HKCR
+{
+	Ladder.ldr = s 'ldr Class'
+	{
+		CLSID = s '{35FEF323-EADA-4003-82A3-E803EE985DEE}'
+		CurVer = s 'Ladder.ldr.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {35FEF323-EADA-4003-82A3-E803EE985DEE} = s 'ldr Class'
+		{
+			ProgID = s 'Ladder.ldr.1'
+			VersionIndependentProgID = s 'Ladder.ldr'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{8C121126-3183-4EE6-AABD-C01908232A7F}'
+		}
+	}
+}

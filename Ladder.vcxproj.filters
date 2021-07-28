@@ -1,0 +1,681 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Quellcodedateien">
+      <UniqueIdentifier>{db7547eb-7452-424f-890a-47cafed9aca0}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header-Dateien">
+      <UniqueIdentifier>{04e53153-b436-4d6a-ae93-41d1ff01a8c2}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Ressourcendateien">
+      <UniqueIdentifier>{999613fe-683f-41a4-af98-864b649daeeb}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Dialogs">
+      <UniqueIdentifier>{433bb12f-00a4-44ee-8301-9cfd68ba7191}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LElements">
+      <UniqueIdentifier>{f89e13ef-c4b5-4c4d-a555-b97b90299337}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CElements">
+      <UniqueIdentifier>{ab0f5cee-8fba-44b4-8a1e-2f3abeb4d988}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LElements\logicals">
+      <UniqueIdentifier>{208040ea-ad34-42bd-a49a-eee5a99a8fb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LElements\built-in">
+      <UniqueIdentifier>{80d71176-66ed-4439-bda5-de5db701af5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LElements\Nets">
+      <UniqueIdentifier>{46eeac24-69ef-4ac3-944d-d3233d729b7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Signal">
+      <UniqueIdentifier>{0f05179e-2e65-4093-ba61-40dd76e5767a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="gxDrawer.cpp">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Ladder.cpp">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="ldr.cpp">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SI.cpp">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolsStates.cpp">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgAnalogInputs.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgAnalogOutputs.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgBits.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgBytes.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgConnectionInfo.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgCounters.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgDigitalInputs.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgDigitalOutputs.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgEBytes.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgEByteSlect.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgElementInfo.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgEWords.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgMemories.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgRegisters.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgSubNtSel.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgTimers.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="ConnectionElement.cpp">
+      <Filter>CElements</Filter>
+    </ClCompile>
+    <ClCompile Include="LE_And.cpp">
+      <Filter>LElements\logicals</Filter>
+    </ClCompile>
+    <ClCompile Include="LE_And2.cpp">
+      <Filter>LElements\logicals</Filter>
+    </ClCompile>
+    <ClCompile Include="LE_In.cpp">
+      <Filter>LElements\logicals</Filter>
+    </ClCompile>
+    <ClCompile Include="LE_InvContactor.cpp">
+      <Filter>LElements\logicals</Filter>
+    </ClCompile>
+    <ClCompile Include="LE_Invert.cpp">
+      <Filter>LElements\logicals</Filter>
+    </ClCompile>
+    <ClCompile Include="LE_Off.cpp">
+      <Filter>LElements\logicals</Filter>
+    </ClCompile>
+    <ClCompile Include="LE_On.cpp">
+      <Filter>LElements\logicals</Filter>
+    </ClCompile>
+    <ClCompile Include="LE_Or.cpp">
+      <Filter>LElements\logicals</Filter>
+    </ClCompile>
+    <ClCompile Include="LE_Or2.cpp">
+      <Filter>LElements\logicals</Filter>
+    </ClCompile>
+    <ClCompile Include="LE_Block.cpp">
+      <Filter>LElements\built-in</Filter>
+    </ClCompile>
+    <ClCompile Include="LE_Contactor.cpp">
+      <Filter>LElements\built-in</Filter>
+    </ClCompile>
+    <ClCompile Include="LE_Counter.cpp">
+      <Filter>LElements\built-in</Filter>
+    </ClCompile>
+    <ClCompile Include="LE_DiagramEntity.cpp">
+      <Filter>LElements\built-in</Filter>
+    </ClCompile>
+    <ClCompile Include="LE_End.cpp">
+      <Filter>LElements\built-in</Filter>
+    </ClCompile>
+    <ClCompile Include="LE_Memory.cpp">
+      <Filter>LElements\built-in</Filter>
+    </ClCompile>
+    <ClCompile Include="LE_Out.cpp">
+      <Filter>LElements\built-in</Filter>
+    </ClCompile>
+    <ClCompile Include="LE_Output.cpp">
+      <Filter>LElements\built-in</Filter>
+    </ClCompile>
+    <ClCompile Include="LE_Point.cpp">
+      <Filter>LElements\built-in</Filter>
+    </ClCompile>
+    <ClCompile Include="LE_Register.cpp">
+      <Filter>LElements\built-in</Filter>
+    </ClCompile>
+    <ClCompile Include="LE_Start.cpp">
+      <Filter>LElements\built-in</Filter>
+    </ClCompile>
+    <ClCompile Include="LE_Text.cpp">
+      <Filter>LElements\built-in</Filter>
+    </ClCompile>
+    <ClCompile Include="LE_Timer.cpp">
+      <Filter>LElements\built-in</Filter>
+    </ClCompile>
+    <ClCompile Include="NetWorkContainer.cpp">
+      <Filter>LElements\Nets</Filter>
+    </ClCompile>
+    <ClCompile Include="SubNet.cpp">
+      <Filter>LElements\Nets</Filter>
+    </ClCompile>
+    <ClCompile Include="SubNetContactor.cpp">
+      <Filter>LElements\Nets</Filter>
+    </ClCompile>
+    <ClCompile Include="SubNetSchalt.cpp">
+      <Filter>LElements\Nets</Filter>
+    </ClCompile>
+    <ClCompile Include="TLE_Contactor.cpp">
+      <Filter>LElements\logicals</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgWords.cpp">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SubNetBlock.cpp">
+      <Filter>LElements\Nets</Filter>
+    </ClCompile>
+    <ClCompile Include="SubNetFunction.cpp">
+      <Filter>LElements\Nets</Filter>
+    </ClCompile>
+    <ClCompile Include="SubNetList.cpp">
+      <Filter>LElements\Nets</Filter>
+    </ClCompile>
+    <ClCompile Include="Signal2.cpp">
+      <Filter>Signal</Filter>
+    </ClCompile>
+    <ClCompile Include="NetWork.cpp">
+      <Filter>LElements\Nets</Filter>
+    </ClCompile>
+    <ClCompile Include="AnaliticalUtilities.cpp">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="LadderElement.cpp">
+      <Filter>LElements</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\Ladder.rc2">
+      <Filter>Ressourcendateien</Filter>
+    </None>
+    <None Include="Ladder.rgs">
+      <Filter>Ressourcendateien</Filter>
+    </None>
+    <None Include="ldr.rgs">
+      <Filter>Ressourcendateien</Filter>
+    </None>
+    <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="SubNets.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="Ladder.idl">
+      <Filter>Quellcodedateien</Filter>
+    </Midl>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Ladder.rc">
+      <Filter>Quellcodedateien</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="gxDrawer.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Ladder.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="ldr.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SI.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="ToolsStates.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgAnalogInputs.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgAnalogOutputs.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgBits.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgBytes.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgConnectionInfo.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgCounters.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgDigitalInputs.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgDigitalOutputs.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgEBytes.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgEByteSlect.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgElementInfo.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgEWords.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgMemories.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgRegisters.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgSubNtSel.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgTimers.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="ConnectionElement.h">
+      <Filter>CElements</Filter>
+    </ClInclude>
+    <ClInclude Include="LE_On.h">
+      <Filter>LElements\logicals</Filter>
+    </ClInclude>
+    <ClInclude Include="LE_Or.h">
+      <Filter>LElements\logicals</Filter>
+    </ClInclude>
+    <ClInclude Include="LE_Or2.h">
+      <Filter>LElements\logicals</Filter>
+    </ClInclude>
+    <ClInclude Include="LE_In.h">
+      <Filter>LElements\logicals</Filter>
+    </ClInclude>
+    <ClInclude Include="LE_InvContactor.h">
+      <Filter>LElements\logicals</Filter>
+    </ClInclude>
+    <ClInclude Include="LE_Invert.h">
+      <Filter>LElements\logicals</Filter>
+    </ClInclude>
+    <ClInclude Include="LE_And.h">
+      <Filter>LElements\logicals</Filter>
+    </ClInclude>
+    <ClInclude Include="LE_And2.h">
+      <Filter>LElements\logicals</Filter>
+    </ClInclude>
+    <ClInclude Include="LE_Off.h">
+      <Filter>LElements\logicals</Filter>
+    </ClInclude>
+    <ClInclude Include="LE_Block.h">
+      <Filter>LElements\built-in</Filter>
+    </ClInclude>
+    <ClInclude Include="LE_Contactor.h">
+      <Filter>LElements\built-in</Filter>
+    </ClInclude>
+    <ClInclude Include="LE_Counter.h">
+      <Filter>LElements\built-in</Filter>
+    </ClInclude>
+    <ClInclude Include="LE_DiagramEntity.h">
+      <Filter>LElements\built-in</Filter>
+    </ClInclude>
+    <ClInclude Include="LE_End.h">
+      <Filter>LElements\built-in</Filter>
+    </ClInclude>
+    <ClInclude Include="LE_Memory.h">
+      <Filter>LElements\built-in</Filter>
+    </ClInclude>
+    <ClInclude Include="LE_Out.h">
+      <Filter>LElements\built-in</Filter>
+    </ClInclude>
+    <ClInclude Include="LE_Output.h">
+      <Filter>LElements\built-in</Filter>
+    </ClInclude>
+    <ClInclude Include="LE_Point.h">
+      <Filter>LElements\built-in</Filter>
+    </ClInclude>
+    <ClInclude Include="LE_Register.h">
+      <Filter>LElements\built-in</Filter>
+    </ClInclude>
+    <ClInclude Include="LE_Start.h">
+      <Filter>LElements\built-in</Filter>
+    </ClInclude>
+    <ClInclude Include="LE_Text.h">
+      <Filter>LElements\built-in</Filter>
+    </ClInclude>
+    <ClInclude Include="LE_Timer.h">
+      <Filter>LElements\built-in</Filter>
+    </ClInclude>
+    <ClInclude Include="NetWorkContainer.h">
+      <Filter>LElements\Nets</Filter>
+    </ClInclude>
+    <ClInclude Include="SubNet.h">
+      <Filter>LElements\Nets</Filter>
+    </ClInclude>
+    <ClInclude Include="SubNetContactor.h">
+      <Filter>LElements\Nets</Filter>
+    </ClInclude>
+    <ClInclude Include="SubNetSchalt.h">
+      <Filter>LElements\Nets</Filter>
+    </ClInclude>
+    <ClInclude Include="TLE_Contactor.h">
+      <Filter>LElements\logicals</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgWords.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SubNetBlock.h">
+      <Filter>LElements\Nets</Filter>
+    </ClInclude>
+    <ClInclude Include="SubNetFunction.h">
+      <Filter>LElements\Nets</Filter>
+    </ClInclude>
+    <ClInclude Include="SubNetList.h">
+      <Filter>LElements\Nets</Filter>
+    </ClInclude>
+    <ClInclude Include="Signal2.h">
+      <Filter>Signal</Filter>
+    </ClInclude>
+    <ClInclude Include="NetWork.h">
+      <Filter>LElements\Nets</Filter>
+    </ClInclude>
+    <ClInclude Include="AnaliticalUtilities.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="LadderElement.h">
+      <Filter>LElements</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="bitmap1.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bitmap_i.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bitmap_o.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00001.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00002.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00003.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00004.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00005.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00006.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00007.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00008.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00009.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00010.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00011.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00012.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00013.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00014.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00015.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00016.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00017.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00018.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="memory.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bitmap_m.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bitmap_t.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00019.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bitmap_c.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00020.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00021.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00022.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00023.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00024.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00025.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00026.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00027.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00028.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00029.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00030.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00031.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00032.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00033.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00034.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00134.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00035.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00135.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00036.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00037.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00038.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00039.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00040.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00041.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00042.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00043.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bitmap_b.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00044.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00045.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00046.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00047.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00048.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00049.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00050.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bit_time.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00051.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00052.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00053.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00054.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00055.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00056.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00057.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00058.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00059.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00060.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00061.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00062.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00063.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00064.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00065.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00066.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00067.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00068.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00069.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00070.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00071.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00072.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00073.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00074.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="bmp00075.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>
